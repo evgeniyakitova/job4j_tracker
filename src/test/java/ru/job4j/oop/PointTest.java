@@ -7,6 +7,24 @@ import static org.junit.Assert.*;
 public class PointTest {
 
     @Test
+    public void when1255Then5() {
+        Point a = new Point(1,2);
+        Point b = new Point(5,5);
+        double expected = 5;
+        double result = a.distance(b);
+        assertEquals(expected, result, 0.01);
+    }
+
+    @Test
+    public void when2751ThenDouble67Div10() {
+        Point a = new Point(2,7);
+        Point b = new Point(5,1);
+        double expected = 6.7;
+        double result = a.distance(b);
+        assertEquals(expected, result, 0.01);
+    }
+
+    @Test
     public void when234022Then3() {
         Point a = new Point(2, 3, 4);
         Point b = new Point(0,2,2);
