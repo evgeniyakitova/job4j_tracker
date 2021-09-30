@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class MaxTest {
 
     @Test
-    public void maxWhenTwo() {
+    public void whenTwoThen17() {
         int first = 7;
         int second = 17;
         int expected = 17;
@@ -17,7 +17,7 @@ public class MaxTest {
     }
 
     @Test
-    public void maxWhenThree() {
+    public void whenThreeThen10() {
         int first = 5;
         int second = 10;
         int third = 4;
@@ -28,7 +28,7 @@ public class MaxTest {
     }
 
     @Test
-    public void maxWhenFour() {
+    public void whenFourThen35() {
         int first = 5;
         int second = 10;
         int third = 4;
