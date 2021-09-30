@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class PointTest {
 
     @Test
-    public void firstDistance3d() {
+    public void when234022Then3() {
         Point a = new Point(2, 3, 4);
         Point b = new Point(0,2,2);
         double expected = 3;
@@ -16,7 +16,7 @@ public class PointTest {
     }
 
     @Test
-    public void secondDistance3d() {
+    public void when5310215ThenDouble616Div100() {
         Point a = new Point(5, 3, 10);
         Point b = new Point(2,1,5);
         double expected = 6.16;
@@ -25,7 +25,7 @@ public class PointTest {
     }
 
     @Test
-    public void thirdDistance3d() {
+    public void when201032ThenDouble374Div100() {
         Point a = new Point(2, 0, 1);
         Point b = new Point(0,3,2);
         double expected = 3.74;
