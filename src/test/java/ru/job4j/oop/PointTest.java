@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class PointTest {
 
     @Test
-    public void when1255Then5() {
+    public void when12And55Then5() {
         Point a = new Point(1,2);
         Point b = new Point(5,5);
         double expected = 5;
@@ -16,7 +16,7 @@ public class PointTest {
     }
 
     @Test
-    public void when2751ThenDouble67Div10() {
+    public void when27And51Then6Dot7() {
         Point a = new Point(2,7);
         Point b = new Point(5,1);
         double expected = 6.7;
@@ -25,7 +25,7 @@ public class PointTest {
     }
 
     @Test
-    public void when234022Then3() {
+    public void when234And022Then3() {
         Point a = new Point(2, 3, 4);
         Point b = new Point(0,2,2);
         double expected = 3;
@@ -34,7 +34,7 @@ public class PointTest {
     }
 
     @Test
-    public void when5310215ThenDouble616Div100() {
+    public void when5310And215Then6Dot16() {
         Point a = new Point(5, 3, 10);
         Point b = new Point(2,1,5);
         double expected = 6.16;
@@ -43,7 +43,7 @@ public class PointTest {
     }
 
     @Test
-    public void when201032ThenDouble374Div100() {
+    public void when201And032Then3Dot74() {
         Point a = new Point(2, 0, 1);
         Point b = new Point(0,3,2);
         double expected = 3.74;
