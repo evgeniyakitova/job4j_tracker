@@ -12,9 +12,15 @@ public class Matches {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
-            turn = !turn;
-            count -= matches;
-            System.out.println("Количество оставшихся спичек: " + count);
+            if (matches > count) {
+                System.out.println("Число превышает количество оставшихся спичек!");
+            } else if (matches > 3 || matches < 1) {
+                System.out.println("Число не находится в промежутке от 1 до 3!");
+            } else {
+                turn = !turn;
+                count -= matches;
+                System.out.println("Количество оставшихся спичек: " + count);
+            }
         }
         if (!turn) {
             System.out.println("Выиграл первый игрок");
