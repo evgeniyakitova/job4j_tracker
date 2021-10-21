@@ -18,4 +18,15 @@ public class OrderConvertTest {
         HashMap<String, Order> map = OrderConvert.process(orders);
         assertThat(map.get("3sfe"), is(new Order("3sfe", "Dress")));
     }
+
+    @Test
+    public void whenListOf3ThenMapOf2() {
+        List<Order> orders = new ArrayList<>();
+        orders.add(new Order("33rr", "Dress"));
+        orders.add(new Order("33rr", "Dress"));
+        orders.add(new Order("55rr", "Jacket"));
+        HashMap<String, Order> map = OrderConvert.process(orders);
+        int result = map.size();
+        assertThat(result, is(2));
+    }
 }
