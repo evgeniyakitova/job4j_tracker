@@ -21,7 +21,6 @@ public class PassportOfficeTest {
         Citizen second = new Citizen("356913", "Mike");
         PassportOffice office = new PassportOffice();
         office.add(first);
-        office.add(second);
-        assertThat(office.get(first.getPassport()), is(first));
+        assertFalse(office.add(second));
     }
 }
