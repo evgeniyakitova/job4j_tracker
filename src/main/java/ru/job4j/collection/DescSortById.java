@@ -6,6 +6,6 @@ import java.util.Comparator;
 public class DescSortById implements Comparator<Item> {
     @Override
     public int compare(Item first, Item second) {
-        return second.getId() - first.getId();
+        return Integer.compare(second.getId(), first.getId());
     }
 }
