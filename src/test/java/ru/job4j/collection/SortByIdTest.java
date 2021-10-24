@@ -11,7 +11,7 @@ import java.util.List;
 public class SortByIdTest {
 
     @Test
-    public void whenAscSort(){
+    public void whenAscSort() {
         Item first = new Item("test1", 1);
         Item second = new Item("test2", 2);
         Item third = new Item("test3", 3);
@@ -22,7 +22,7 @@ public class SortByIdTest {
     }
 
     @Test
-    public void whenDescSort(){
+    public void whenDescSort() {
         Item first = new Item("test1", 1);
         Item second = new Item("test2", 2);
         Item third = new Item("test3", 3);
