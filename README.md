@@ -1,3 +1,9 @@
 # job4j_tracker
 
-[![Build Status](https://app.travis-ci.com/evgeniyakitova/job4j_tracker.svg?branch=master)](https://app.travis-ci.com/evgeniyakitova/job4j_tracker)
+## О проекте
+Этот проект является учебным. Демонстрируется работа с основными возможностями ООП, с Java Collections Framework,
+а также с функциональными возможностями языка Java и модульным тестированием.
+## Сборка или установка
+Используется Maven
+## Контакты
+tg:@Zzhenya007
