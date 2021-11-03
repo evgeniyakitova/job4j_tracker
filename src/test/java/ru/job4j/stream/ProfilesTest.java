@@ -23,4 +23,20 @@ public class ProfilesTest {
         );
         assertThat(result, is(expected));
     }
+
+    @Test
+    public void whenCollectFourAddressThenTwo() {
+        Profiles profiles = new Profiles();
+        List<Address> result = profiles.collect(Arrays.asList(
+                new Profile(new Address("Moscow", "Vavilova", 33, 3)),
+                new Profile(new Address("Moscow", "Vavilova", 33, 3)),
+                new Profile(new Address("Chelyabinsk", "Frunze", 23, 3)),
+                new Profile(new Address("Chelyabinsk", "Frunze", 23, 3))
+        ));
+        List<Address> expected = Arrays.asList(
+                new Address("Chelyabinsk", "Frunze", 23, 3),
+                new Address("Moscow", "Vavilova", 33, 3)
+        );
+        assertThat(result, is(expected));
+    }
 }
