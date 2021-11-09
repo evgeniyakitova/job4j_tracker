@@ -17,7 +17,7 @@ public class ProfilesTest {
                 new Profile(new Address("Moscow", "Tverskaya", 23, 3)),
                 new Profile(new Address("Moscow", "Vavilova", 33, 3))
         ));
-        List<Address> expected = Arrays.asList(
+        List<Address> expected = List.of(
                 new Address("Moscow", "Tverskaya", 23, 3),
                 new Address("Moscow", "Vavilova", 33, 3)
         );
@@ -33,7 +33,7 @@ public class ProfilesTest {
                 new Profile(new Address("Chelyabinsk", "Frunze", 23, 3)),
                 new Profile(new Address("Chelyabinsk", "Frunze", 23, 3))
         ));
-        List<Address> expected = Arrays.asList(
+        List<Address> expected = List.of(
                 new Address("Chelyabinsk", "Frunze", 23, 3),
                 new Address("Moscow", "Vavilova", 33, 3)
         );

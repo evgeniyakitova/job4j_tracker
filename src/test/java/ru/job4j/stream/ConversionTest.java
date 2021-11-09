@@ -18,9 +18,10 @@ public class ConversionTest {
                 new Student(3, "Petrov")
         );
         Map<String, Student> rsl = Conversion.convertToMap(in);
-        Map<String, Student> expected = new HashMap<>();
-        expected.put("Volkov", new Student(5, "Volkov"));
-        expected.put("Petrov", new Student(3, "Petrov"));
+        Map<String, Student> expected = Map.of(
+                "Volkov", new Student(5, "Volkov"),
+                "Petrov", new Student(3, "Petrov")
+        );
         assertEquals(rsl, expected);
     }
 }
