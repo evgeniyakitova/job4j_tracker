@@ -58,4 +58,46 @@ public class SqlTrackerTest {
         tracker.add(item);
         assertThat(tracker.findById(item.getId()), is(item));
     }
+
+    @Test
+    public void whenReplace() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item firstItem = new Item("firstItem");
+        tracker.add(firstItem);
+        Item secondItem = new Item("secondItem");
+        int id = firstItem.getId();
+        tracker.replace(id, secondItem);
+        assertThat(tracker.findById(id), is(secondItem));
+    }
+
+    @Test
+    public void whenFindAllThenSizeIsTwo() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item firstItem = new Item("firstItem");
+        Item secondItem = new Item("secondItem");
+        tracker.add(firstItem);
+        tracker.add(secondItem);
+        List<Item> result = tracker.findAll();
+        assertThat(result.size(), is(2));
+        assertThat(result.get(0), is(firstItem));
+    }
+
+    @Test
+    public void whenFindByName() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item firstItem = new Item("firstItem");
+        Item secondItem = new Item("secondItem");
+        tracker.add(firstItem);
+        tracker.add(secondItem);
+        assertThat(tracker.findByName("firstItem").get(0), is(firstItem));
+    }
+
+    @Test
+    public void whenDelete() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item item = new Item("item");
+        tracker.add(item);
+        tracker.delete(item.getId());
+        assertThat(tracker.findById(item.getId()), is(nullValue()));
+    }
 }
