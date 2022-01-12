@@ -67,7 +67,7 @@ public class SqlTrackerTest {
         Item secondItem = new Item("secondItem");
         int id = firstItem.getId();
         tracker.replace(id, secondItem);
-        assertThat(tracker.findById(id), is(secondItem));
+        assertThat(tracker.findById(id).getName(), is("secondItem"));
     }
 
     @Test
@@ -77,9 +77,7 @@ public class SqlTrackerTest {
         Item secondItem = new Item("secondItem");
         tracker.add(firstItem);
         tracker.add(secondItem);
-        List<Item> result = tracker.findAll();
-        assertThat(result.size(), is(2));
-        assertThat(result.get(0), is(firstItem));
+        assertThat(tracker.findAll(), is(List.of(firstItem, secondItem)));
     }
 
     @Test
